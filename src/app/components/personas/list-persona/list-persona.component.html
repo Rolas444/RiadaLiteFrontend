@@ -1,0 +1,20 @@
+<form>
+    <div class="input-group flex-nowrap">
+
+        <input class="form-control" type="text" 
+        placeholder="busqueda por nombre, apellido o documento de identidad ..." 
+        [(ngModel)]="xsearch" #ctrl="ngModel" (input)="searchPerson()" name="buscar">
+        <span class="input-group-text" ><i class="fa-brands fa-searchengin"></i></span>
+    </div>
+</form>
+<hr>
+<table id="entrytable" class="table table-sm">
+  <tr *ngFor="let person of listaPersonas" >
+    <td >{{person.name}}</td>
+    <td>{{person.lastName}}</td>
+    <td>{{person.lastName2}}</td>
+    <td>
+      <button type="button" class="btn btn-light" title="detalle" (click)="viewPersona(person)"><i  class="fa-solid fa-align-justify"></i></button>
+    </td>
+  </tr>
+</table>

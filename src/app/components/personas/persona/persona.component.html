@@ -1,0 +1,82 @@
+<form [formGroup]="personform" (ngSubmit)="saveperson()">
+    <div class="form-group">
+        <div class="input-group flex-nowrap">
+            
+            <span class="input-group-text" ><i class="fas fa-user-circle"></i></span>
+            <input formControlName="names" class="form-control" type="text" placeholder="nombres">
+        </div>
+        
+        
+    </div>
+    <div class="form-group">
+        <input formControlName="lastname" class="form-control" type="text" placeholder="Apellido Paterno">
+        <input formControlName="lastname2" class="form-control" type="text" placeholder="Apellido Materno">
+        <div  class="input-group ">
+            <label class="input-group-text" for="inputGroupSelect01">Tipo de Documento</label>
+            <select formControlName="tipdoc" class="form-select" id="inputGroupSelect01">
+              <option selected> </option>
+              <option value="1">DNI</option>
+              <option value="2">Carnet de extranjería</option>
+              <option value="3">Libreta militar</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-id-card"></i> </span>
+            <input formControlName="documentid" type="text" class="form-control" aria-describedby="inputGroup-sizing-default" placeholder="N° de Documento">
+          </div>
+        <div class="input-group">
+            <span class="input-group-text" id="inputGroup-sizing-default">Fecha de Nacimiento </span>
+            <input formControlName="birthday" type="date" class="form-control" aria-describedby="inputGroup-sizing-default" >
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" ><i class="fas fa-at"></i></span>
+            <input formControlName="email" class="form-control" type="email" placeholder="Correo electrónico">
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" ><i class="fas fa-location-dot"></i> </span>
+            <input formControlName="address" class="form-control" type="text" placeholder="Dirección">
+            
+        </div>
+        <div class="input-group ">
+            <label class="input-group-text" for="inputGroupSelect01">Departamento</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected> </option>
+              <option value="1">-</option>
+            </select>
+        </div>
+        <div class="input-group ">
+            <label class="input-group-text" for="inputGroupSelect01">Provincia</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected> </option>
+              <option value="1">-</option>
+            </select>
+        </div>
+        <div class="input-group ">
+            <label class="input-group-text" for="inputGroupSelect01">Distrito</label>
+            <select formControlName="ubigeo" class="form-select" id="inputGroupSelect01">
+              <option selected> </option>
+              <option value="1">-</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" 
+        data-bs-placement="top" title="Nuevo" type="button">
+        <i class="fa-solid fa-file-circle-plus"></i>
+        </button>
+        <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" 
+        data-bs-placement="top" title="Editar" type="button">
+            <i class="fa-solid fa-file-pen"></i>
+        </button>
+        <button class="btn btn-outline-secondary" type="submit"  data-bs-toggle="tooltip" 
+        data-bs-placement="top" title="Grabar" >
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+        <button class="btn btn-outline-secondary" data-bs-toggle="tooltip" 
+        data-bs-placement="top" title="Limpiar" type="button">
+        <i class="fa-solid fa-eraser"></i>
+        <!--<i class="fa-solid fa-rectangle-xmark"></i>-->
+        </button>
+      </div>
+</form>
